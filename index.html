@@ -21,26 +21,26 @@
 		<!--Overview section-->
 		<section class="profile-section row margin-bottom-15">
 			<div class="col-md-3">
-				<img id="profile-picture" ng-src={{profileImage}}>
+				<img id="profile-picture" ng-src={{profile.profileImage}}>
 			</div>
 			
 			<div id="profile-overview" class="col-md-9">
-				<h1 id="name" ng-bind="name"></h1>
-				<p id="headline" ng-bind="headline"></p>
+				<h1 id="name" ng-bind="profile.name"></h1>
+				<p id="headline" ng-bind="profile.headline"></p>
 				<p>
-					<span id="nationality" ng-bind="nationality">=</span> |
-					<span id="job" ng-bind="job"></span>
+					<span id="nationality" ng-bind="profile.nationality">=</span> |
+					<span id="job" ng-bind="profile.job"></span>
 				</p>
 				<table id="contact">
 					<tbody>
 						<tr>
 							<th>Email</th>
-							<td ng-bind="email"></td>
+							<td ng-bind="profile.email"></td>
 						</tr>
 						
 						<tr>
 							<th>Phone number</th>
-							<td ng-bind="phoneNumber"></td>
+							<td ng-bind="profile.phoneNumber"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -50,15 +50,15 @@
 		<!--Summary section-->
 		<section id="summary" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Summary</h3>
-			<div ng-repeat="paragraph in summaryParagraphs">
-				<p ng-bind="paragraph"></p>
+			<div ng-repeat="obj in profile.summaryParagraphs">
+				<p ng-bind="obj"></p>
 			</div>
 		</section>
 		
 		<!--Experience section-->
 		<section id="experience" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Experience</h3>
-			<ul id="experience-list" class="big-entry-list" ng-repeat="obj in experience">
+			<ul id="experience-list" class="big-entry-list" ng-repeat="obj in profile.experience">
 			
 				<li>
 					<div class="row">
@@ -84,7 +84,7 @@
 		<!--Project section-->
 		<section id="project" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Project</h3>
-			<ul id="project-list" class="big-entry-list" ng-repeat="obj in project">
+			<ul id="project-list" class="big-entry-list" ng-repeat="obj in profile.project">
 			
 				<li>
 					<h4 class="item-title" ng-bind="obj.name"></h4>
@@ -102,7 +102,7 @@
 		<!--Skills section-->
 		<section id="skills" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Skills</h3>
-			<ul id="skills-list" ng-repeat="skill in skills">
+			<ul id="skills-list" ng-repeat="skill in profile.skills">
 				<li class="label label-default" ng-bind="skill"></li>		
 			</ul>
 		</section>
@@ -110,7 +110,7 @@
 		<!--Education section-->
 		<section id="education" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Education</h3>
-			<div id="education-list" class="big-entry-list" ng-repeat="obj in education">
+			<div id="education-list" class="big-entry-list" ng-repeat="obj in profile.education">
 				
 				<li>
 					<div class="row">
