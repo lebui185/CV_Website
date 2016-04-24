@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>CV</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+
+</head>
+
+<body data-ng-app="profileApp">
+
+<div class="container">
+
+	<div id="profile" data-ng-controller="profileController">
+	
+		<!--Overview section-->
+		<section class="profile-section row margin-bottom-15">
+			<div class="col-md-3">
+				<img id="profile-picture" src="img/lebui.jpg">
+			</div>
+			
+			<div id="profile-overview" class="col-md-9">
+				<h1 id="name">Le Bui Huu</h1>
+				<p id="headline">Ho Chi Minh University of Science</p>
+				<p>
+					<span id="nationality">Vietnam</span> |
+					<span id="job">Student</span>
+				</p>
+				<table id="contact">
+					<tbody>
+						<tr>
+							<th>Email</th>
+							<td>lebui185@gmail.com</td>
+						</tr>
+						
+						<tr>
+							<th>Phone number</th>
+							<td>0936864850</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+		<section id="summary" class="profile-section row margin-bottom-15 well">
+			<h3 class="section-title">Summary</h3>
+			<div id="summary-description">
+				<p>Internet executive with over 20 years of experience,
+				including general management of mid to large size organizations,
+				corporate development, product development,
+				usiness operations, and strategy.
+				</p>
+				
+				<p>Currently CEO at LinkedIn, the web's largest and most powerful network of professionals. </p>
+				<p>Prior to LinkedIn, was an Executive in Residence at Accel Partners and Greylock Partners. Primarily focused on advising the leadership teams of the firm's existing consumer technology portfolio companies while also working closely with the firm’s partners to evaluate new investment opportunities.</p>
+				<p>Previously served in key leadership roles at Yahoo! for over seven years, most recently as the Executive Vice President of Yahoo!'s Network Division managing Yahoo's consumer web product portfolio, including Yahoo's Front Page, Mail, Search, and Media products.</p>
+				<p>Specialties: general management, corporate development, product development, business operations, strategy, product marketing, non-profit governance</p>
+			</div>
+		</section>
+		
+		<section id="experience" class="profile-section row margin-bottom-15 well">
+			<h3 class="section-title">Experience</h3>
+			<ul id="experience-list" class="big-entry-list">
+				<li>
+					<div class="row">
+						<div class="col-md-3">
+							<h4 class="item-title">Junior Developer</h4>
+							<h5 class="item-subtitle">FTP Software</h5>
+							<div class="meta">
+								<span class="date-range">
+									<time>December 2008 – December 2009</time>
+								</span>
+							</div>
+						</div>
+						
+						<div class="col-md-2">
+							<img class="item-logo center-block" src="img/fpt.png">
+						</div>	
+					</div>
+				</li>
+				
+				<li>
+					<div class="row">
+						<div class="col-md-3">
+							<h4 class="item-title">Senior Developer</h4>
+							<h5 class="item-subtitle">VNG</h5>
+							<div class="meta">
+								<span class="date-range">
+									<time>Jannuary 2010 – Jannuary 2012</time>
+								</span>
+							</div>
+						</div>
+						
+						<div class="col-md-2">
+							<img class="item-logo center-block" src="img/vng.gif">
+						</div>	
+					</div>
+				</li>
+				
+				<li>
+					<div class="row">
+						<div class="col-md-3">
+							<h4 class="item-title">UI/UX Designer</h4>
+							<h5 class="item-subtitle">TMA Solution</h5>
+							<div class="meta">
+								<span class="date-range">
+									<time>February 2012 – Present</time>
+								</span>
+							</div>
+						</div>
+						
+						<div class="col-md-2">
+							<img class="item-logo center-block" src="img/tma.png">
+						</div>	
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<section id="project" class="profile-section row margin-bottom-15 well">
+			<h3 class="section-title">Project</h3>
+			<ul id="project-list" class="big-entry-list">
+			
+				<li>
+					<h4 class="item-title">Calculator</h4>
+					<div class="meta">
+						<span class="date-range">
+							<time>June 2015 - July 2015</time>
+						</span>
+						<p class="project-item-description">Simple Calculator written in Java, JavaFX</p>
+					</div>
+				</li>
+				
+				<li>
+					<h4 class="item-title">My Paint</h4>
+					<div class="meta">
+						<span class="date-range">
+							<time>November 2015 - December 2015</time>
+						</span>
+						<p class="project-item-description">Free drawing program written in C#</p>
+					</div>
+				</li>
+				
+				<li>
+					<h4 class="item-title">Gomoku</h4>
+					<div class="meta">
+						<span class="date-range">
+							<time>December 2015 - Jannuary 2016</time>
+						</span>
+						<p class="project-item-description">Multiplayer Gomoku game written in C#</p>
+					</div>
+				</li>
+				
+			</ul>
+		</section>
+		
+		<section id="skills" class="profile-section row margin-bottom-15 well">
+			<h3 class="section-title">Skills</h3>
+			<ul id="skills-list">
+				<li class="label label-default">Teamwork</li>
+				<li class="label label-default">Presentation</li>
+				<li class="label label-default">Non-profits</li>
+				<li class="label label-default">Social Media</li>
+				<li class="label label-default">Business Operations</li>
+				<li class="label label-default">Leadership Development</li>
+				<li class="label label-default">Computer Network</li>
+				<li class="label label-default">Software Process</li>
+				<li class="label label-default">C++</li>
+				<li class="label label-default">C#</li>
+				<li class="label label-default">Java</li>
+				<li class="label label-default">HTML</li>
+				<li class="label label-default">CSS</li>
+				<li class="label label-default">Javascript</li>
+				<li class="label label-default">Bootstrap</li>
+				<li class="label label-default">AngularJS</li>
+				<li class="label label-default">ASP.NET</li>
+				<li class="label label-default">Linux</li>			
+			</ul>
+		</section>
+		
+		<section id="education" class="profile-section row margin-bottom-15 well">
+			<h3 class="section-title">Education</h3>
+			<div id="education-list" class="big-entry-list">
+				
+				<li>
+					<div class="row">
+						<div class="col-md-3">
+							<h4 class="item-title">Ho Chi Minh University of Science</h4>
+							<h5 class="item-subtitle">Bachelor's degree</h5>
+							<div class="meta">
+								<span class="date-range">
+									<time>2013-2017</time>
+								</span>
+							</div>
+						</div>
+						
+						<div class="col-md-2">
+							<img class="item-logo center-block" src="img/hcmus.png">
+						</div>	
+					</div>
+				</li>
+				
+			</div>
+		</section>
+		
+	</div>
+</div>
+
+<script src="js/angular.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jquery-2.2.3.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
+

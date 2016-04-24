@@ -1,0 +1,89 @@
+body {
+	background: #e9e9e9;
+}
+
+.margin-bottom-15 {
+	margin-bottom: 15px;
+}
+
+.profile-section {
+	background: #fff;
+}
+
+#profile-picture {
+	width: 240px;
+	height: 240px;
+}
+
+#profile-overview {
+	color: #666;
+	font-size: 13px;
+}
+
+#name {
+	font-size: 20px;
+	color: black;
+}
+
+#headline {
+	font-size: 18px;
+}
+
+#nationality {
+	
+}
+
+#job {
+	
+}
+
+#contact {
+
+}
+#contact td {
+	padding: 5px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+#skills-list > li {
+	display: inline-block;
+	font-size: 13px;
+	padding: 10px;
+	margin: 3px;
+}
+
+.big-entry-list {
+	list-style: none;
+	padding: 0;
+}
+
+.big-entry-list > li {
+	padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-title {
+	font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.item-subtitle {
+	font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #434649;
+}
+
+.meta {
+	font-size: 13px;
+    line-height: 15px;
+    color: #66696a;
+}
