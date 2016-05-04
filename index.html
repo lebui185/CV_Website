@@ -29,7 +29,7 @@
 				<p id="headline" ng-bind="profile.headline"></p>
 				<p>
 					<span id="nationality" ng-bind="profile.nationality">=</span> |
-					<span id="job" ng-bind="profile.job"></span>
+					<span id="field" ng-bind="profile.field"></span>
 				</p>
 				<table id="contact">
 					<tbody>
@@ -50,9 +50,7 @@
 		<!--Summary section-->
 		<section id="summary" class="profile-section row margin-bottom-15 well">
 			<h3 class="section-title">Summary</h3>
-			<div ng-repeat="obj in profile.summaryParagraphs">
-				<p ng-bind="obj"></p>
-			</div>
+			<div ng-bind-html="profile.summary | nl2br"></div>
 		</section>
 		
 		<!--Experience section-->
@@ -61,14 +59,14 @@
 			<ul id="experience-list" class="big-entry-list" ng-repeat="obj in profile.experience">
 			
 				<li>
-					<div class="row">
+					<div class="row margin-bottom-15">
 						<div class="col-md-3">
 							<h4 class="item-title" ng-bind="obj.position"></h4>
 							<h5 class="item-subtitle" ng-bind="obj.company"></h5>
 							<div class="meta">
-								<span class="date-range">
+								<div class="date-range">
 									<time ng-bind="obj.time"></time>
-								</span>
+								</div>
 							</div>
 						</div>
 						
@@ -76,6 +74,7 @@
 							<img class="item-logo center-block" ng-src={{obj.logo}}>
 						</div>	
 					</div>
+					<div ng-bind-html="obj.description | nl2br"></div>
 				</li>
 			
 			</ul>
@@ -137,6 +136,7 @@
 </div>
 
 <script src="js/angular.js"></script>
+<script src="js/angular-sanitize.js"></script>
 <script src="js/script.js"></script>
 <script src="js/jquery-2.2.3.js"></script>
 <script src="js/bootstrap.js"></script>

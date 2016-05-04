@@ -1,29 +1,32 @@
 {
 	"profileImage": "img/lebui.jpg",
-	"name": "Le Bui Huu",
-	"headline": "Ho Chi Minh University of Science",
+	"name": "Lễ Bùi",
+	"headline": "Student at Ho Chi Minh University of Science",
 	"nationality": "Vietnam",
-	"job": "Student",
+	"field": "Software Engineering",
 	"email": "lebui185@gmail.com",
 	"phoneNumber": "0936864850",
 	
-	"summaryParagraphs": ["Currently CEO at LinkedIn, the web's largest and most powerful network of professionals.", "Prior to LinkedIn, was an Executive in Residence at Accel Partners and Greylock Partners. Primarily focused on advising the leadership teams of the firm's existing consumer technology portfolio companies while also working closely with the firm's partners to evaluate new investment opportunities.", "Previously served in key leadership roles at Yahoo! for over seven years, most recently as the Executive Vice President of Yahoo!'s Network Division managing Yahoo's consumer web product portfolio, including Yahoo's Front Page, Mail, Search, and Media products.", "Specialties: general management, corporate development, product development, business operations, strategy, product marketing, non-profit governance"],
+	"summary": "Currently CEO at LinkedIn, the web's largest and most powerful network of professionals.\nPrior to LinkedIn, was an Executive in Residence at Accel Partners and Greylock Partners. Primarily focused on advising the leadership teams of the firm's existing consumer technology portfolio companies while also working closely with the firm's partners to evaluate new investment opportunities.\nPreviously served in key leadership roles at Yahoo! for over seven years, most recently as the Executive Vice President of Yahoo!'s Network Division managing Yahoo's consumer web product portfolio, including Yahoo's Front Page, Mail, Search, and Media products.\nSpecialties: general management, corporate development, product development, business operations, strategy, product marketing, non-profit governance",
 	
 	"experience": [{
 		"position": "Junior Developer",
 		"company": "FPT Software",
 		"time": "December 2008 - December 2009",
-		"logo": "img/fpt.png"
+		"logo": "img/fpt.png",
+		"description": "FPT Software is a part of FPT Corporation, the largest IT Corporation in Vietnam with over US$1.65 billion revenue and 22,000 employees. With focus on R&D activities to improve the quality of services, FPT Software has been serving over 350 customers worldwide, of which nearly 40 are Fortune 500 in the industries of manufacturing, semiconductors, healthcare, utility, financial services, content media & entertainment and more.\nQualified with CMMI 5 & ISO 27001:2013, the company delivers world-class services in Cloud, Big Data, Mobility, Legacy Migration, Application Services, Embedded System, Package Implementation, and BPO services globally from delivery centers across the United States, Japan, Europe, Australia, Vietnam and the Asia Pacific region."
 	}, {
 		"position": "Senior Developer",
 		"company": "VNG",
 		"time": "Jannuary 2010 - Jannuary 2012",
-		"logo": "img/vng.gif"
+		"logo": "img/vng.gif",
+		"description": "VNG Corporation (VNG) is a Vietnamese technology company, founded in 2004, specializing in digital content and online entertainment, social networking, and e-commerce."
 	}, {
 		"position": "UI/UX Designer",
 		"company": "TMA Solution",
 		"time": "February 2012 - Present",
-		"logo": "img/tma.png"
+		"logo": "img/tma.png",
+		"description": "TMA Solutions was established in 1997 to provide quality software outsourcing services to leading companies worldwide. We are one of the largest software outsourcing companies in Vietnam with 1,800+ engineers. Our engineering team was selected from a large pool of Vietnam IT resources; they are well-trained and have successfully completed many large and complex projects."
 	}],
 	
 	"project": [{
@@ -44,7 +47,7 @@
 	
 	"education": [{
 		"name": "Ho Chi Minh University of Science",
-		"degree": "Bachelor's degree",
+		"degree": "Bachelor's degree, Computer Science",
 		"time": "2013-2017",
 		"logo": "img/hcmus.png"
 	}]
