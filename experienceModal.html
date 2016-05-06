@@ -1,0 +1,40 @@
+<form role="form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4>Experience</h4>
+		</div>
+
+		<div class="modal-body">
+			<div class="form-group">
+		    	<label for="position">Position</label>
+		    	<input id="position" class="form-control" type="text" class="form-control" ng-model="cloneItem.position">
+			</div>
+
+			<div class="form-group">
+		    	<label for="company">Company</label>
+		    	<input id="company" class="form-control" type="text" class="form-control" ng-model="cloneItem.company">
+			</div>
+
+			<div class="form-group">
+		    	<label for="description">Description</label>
+		    	<textarea id="description" class="form-control" ng-model="cloneItem.description"
+		    			style="height: 150px;"></textarea>
+			</div>
+
+			<div class="form-group">
+		    	<label for="startDate">Start</label>
+		    	<input id="startDate" class="form-control" type="month" ng-model="cloneItem.startDate">
+			</div>
+
+			<div class="form-group">
+		    	<label for="endDate">End</label>
+		    	<input id="endDate" class="form-control" type="month" ng-model="cloneItem.endDate">
+			</div>
+		</div>
+
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" ng-click="close()">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="saveChange()">Save changes</button>
+		</div>
+	</div>
+</form>

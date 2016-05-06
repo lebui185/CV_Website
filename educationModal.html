@@ -1,0 +1,35 @@
+<form role="form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4>Education</h4>
+		</div>
+
+		<div class="modal-body">
+			<div class="form-group">
+		    	<label for="name">Name</label>
+		    	<input id="name" class="form-control" type="text" class="form-control" ng-model="cloneItem.name">
+			</div>
+
+			<div class="form-group">
+		    	<label for="description">Degree</label>
+		    	<input id="name" class="form-control" type="text" class="form-control" ng-model="cloneItem.degree">
+			</div>
+
+			<div class="form-group">
+		    	<label for="startDate">Start</label>
+		    	<input id="startDate" class="form-control" type="month" ng-model="cloneItem.startDate">
+			</div>
+
+			<div class="form-group">
+		    	<label for="endDate">End</label>
+		    	<input id="endDate" class="form-control" type="month" ng-model="cloneItem.endDate">
+			</div>
+
+		</div>
+
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" ng-click="close()">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="saveChange()">Save changes</button>
+		</div>
+	</div>
+</form>

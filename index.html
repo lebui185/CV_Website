@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="profileApp">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,39 +8,46 @@
 	<meta name="viewport" content="width = device-width, initial-scale = 1">
 	<title>CV</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-editable.css">
 	<link rel="stylesheet" type="text/css" href="css/default.css">
-
 </head>
 
-<body ng-app="profileApp">
+<body>
 
 <div class="container">
 
 	<div id="profile" ng-controller="profileController">
 	
 		<!--Overview section-->
-		<section class="profile-section row margin-bottom-15">
-			<div class="col-md-3">
+		<section class="profile-section row margin-bottom-15 descendant-hover">
+			<div id="profile-picture-container" class="col-md-3">
 				<img id="profile-picture" ng-src={{profile.profileImage}}>
+				<label id="change-picture-input-label" class="btn btn-primary" for="change-picture-input">Choose picture</label>
+				<input id="change-picture-input" type="file" name="pic" accept="image/*">
 			</div>
 			
 			<div id="profile-overview" class="col-md-9">
-				<h1 id="name" ng-bind="profile.name"></h1>
-				<p id="headline" ng-bind="profile.headline"></p>
-				<p>
-					<span id="nationality" ng-bind="profile.nationality">=</span> |
+				<div>
+					<h1 id="name" ng-bind="profile.name"></h1>
+				</div>
+				<div>
+					<p id="headline" ng-bind="profile.headline"></p>
+				</div>
+				
+				<div>
+					<span id="country" ng-bind="profile.country"></span> |
 					<span id="field" ng-bind="profile.field"></span>
-				</p>
+				</div>
 				<table id="contact">
 					<tbody>
 						<tr>
 							<th>Email</th>
-							<td ng-bind="profile.email"></td>
+							<td id="email" ng-bind="profile.email"></td>
 						</tr>
 						
 						<tr>
 							<th>Phone number</th>
-							<td ng-bind="profile.phoneNumber"></td>
+							<td id="phoneNumber" ng-bind="profile.phoneNumber"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -48,24 +55,25 @@
 		</section>
 		
 		<!--Summary section-->
-		<section id="summary" class="profile-section row margin-bottom-15 well">
+		<section id="summary-section" class="profile-section row margin-bottom-15 well descendant-hover">
 			<h3 class="section-title">Summary</h3>
-			<div ng-bind-html="profile.summary | nl2br"></div>
+			<div id="summary" ng-bind-html="profile.summary | nl2br"></div>
 		</section>
 		
 		<!--Experience section-->
-		<section id="experience" class="profile-section row margin-bottom-15 well">
+		<section id="experience-section" class="profile-section row margin-bottom-15 well descendant-hover">
 			<h3 class="section-title">Experience</h3>
 			<ul id="experience-list" class="big-entry-list" ng-repeat="obj in profile.experience">
 			
-				<li>
+				<li class="editable-click" ng-click="openExperienceModal(obj)">
 					<div class="row margin-bottom-15">
-						<div class="col-md-3">
+						<div class="col-md-5">
 							<h4 class="item-title" ng-bind="obj.position"></h4>
 							<h5 class="item-subtitle" ng-bind="obj.company"></h5>
 							<div class="meta">
 								<div class="date-range">
-									<time ng-bind="obj.time"></time>
+									<time ng-bind="obj.startDate | monthYearFilter"></time> -
+									<time ng-bind="obj.endDate | monthYearFilter"></time>
 								</div>
 							</div>
 						</div>
@@ -78,24 +86,29 @@
 				</li>
 			
 			</ul>
+
+			<button id="experience-add-button" class="btn btn-default">Add experience</button>
 		</section>
 		
 		<!--Project section-->
-		<section id="project" class="profile-section row margin-bottom-15 well">
+		<section id="project" class="profile-section row margin-bottom-15 well descendant-hover">
 			<h3 class="section-title">Project</h3>
 			<ul id="project-list" class="big-entry-list" ng-repeat="obj in profile.project">
 			
-				<li>
+				<li class="editable-click" ng-click="openProjectModal(obj)">
 					<h4 class="item-title" ng-bind="obj.name"></h4>
 					<div class="meta">
-						<span class="date-range" ng-bind="obj.time">
-							<time></time>
+						<span class="date-range">
+							<time ng-bind="obj.startDate | monthYearFilter"></time> -
+							<time ng-bind="obj.endDate | monthYearFilter"></time>
 						</span>
 						<p class="project-item-description" ng-bind="obj.description"></p>
 					</div>
 				</li>
 			
 			</ul>
+
+			<button id="experience-add-button" class="btn btn-default">Add project</button>
 		</section>
 		
 		<!--Skills section-->
@@ -107,18 +120,19 @@
 		</section>
 		
 		<!--Education section-->
-		<section id="education" class="profile-section row margin-bottom-15 well">
+		<section id="education" class="profile-section row margin-bottom-15 well descendant-hover">
 			<h3 class="section-title">Education</h3>
-			<div id="education-list" class="big-entry-list" ng-repeat="obj in profile.education">
+			<ul id="education-list" class="big-entry-list" ng-repeat="obj in profile.education">
 				
-				<li>
+				<li class="editable-click" ng-click="openEducationModal(obj)">
 					<div class="row">
 						<div class="col-md-3">
 							<h4 class="item-title" ng-bind="obj.name"></h4>
 							<h5 class="item-subtitle" ng-bind="obj.degree"></h5>
 							<div class="meta">
 								<span class="date-range">
-									<time ng-bind="obj.time"></time>
+									<time ng-bind="obj.startDate | yearFilter"></time> -
+									<time ng-bind="obj.endDate | yearFilter"></time>
 								</span>
 							</div>
 						</div>
@@ -129,17 +143,24 @@
 					</div>
 				</li>
 				
-			</div>
+			</ul>
+
+			<button id="experience-add-button" class="btn btn-default">Add education</button>
 		</section>
 		
 	</div>
+
+	
 </div>
 
+<script src="js/jquery-2.2.3.js"></script>
 <script src="js/angular.js"></script>
 <script src="js/angular-sanitize.js"></script>
-<script src="js/script.js"></script>
-<script src="js/jquery-2.2.3.js"></script>
+<script src="js/angular-animate.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-editable.js"></script>
+<script src="js/ui-bootstrap-tpls-1.3.2.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
