@@ -7,17 +7,69 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width = device-width, initial-scale = 1">
 	<title>CV</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-editable.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- font awesome -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<!-- social login button icon -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+
+	<!-- Bootstrap editable -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+
+	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="css/default.css">
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+	<!-- JQuery -->
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+	<!-- Angular sanitize -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.js"></script>
+
+	<!-- bootstrapJS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- bootstrap Editable -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+	<!-- UI bootstrap-tpls -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+	<!-- Angular Fire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+	<!-- custom script -->
+	<script src="js/script.js"></script>
 </head>
 
 <body>
 
-<div class="container">
-
-	<div id="profile" ng-controller="profileController">
+<div class="container" ng-controller="profileController">
+	<div class="row" ng-hide="authData">
+		<h1>CV Page</h1>
+		<button class="btn btn-social btn-facebook" ng-click="login(&quot;facebook&quot;)">
+			<span class="fa fa-facebook"></span>Sign in with Facebook
+		</button>
+	</div>
 	
+
+
+	<div id="profile" ng-show="authData">
+		
+		<div class="row margin-bottom-15">
+			<div class="col-md-12">
+				<button id="logout-button" class="btn btn-default" ng-click="logout()">Log out</button>
+			</div>
+		</div>
 		<!--Overview section-->
 		<section class="profile-section row margin-bottom-15 descendant-hover">
 			<div id="profile-picture-container" class="col-md-3">
@@ -152,15 +204,6 @@
 
 	
 </div>
-
-<script src="js/jquery-2.2.3.js"></script>
-<script src="js/angular.js"></script>
-<script src="js/angular-sanitize.js"></script>
-<script src="js/angular-animate.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrap-editable.js"></script>
-<script src="js/ui-bootstrap-tpls-1.3.2.js"></script>
-<script src="js/script.js"></script>
 
 </body>
 </html>
